@@ -591,7 +591,7 @@ const GAMES = {
     hint: "UID dapat dilihat di pojok kiri bawah dalam game.",
     unit: "Oneiric Shards",
     categories: [
-      { key:"special", label:"Special Item", items: [
+      { key:"special", label:"Special Item", icon:"https://i.postimg.cc/L4vJcfh7/HONKAI-STAR-2.webp", items: [
         { label:"Express Supply Pass", price:58188, old:null, tag:null },
         { label:"2x Express Supply Pass", price:116376, old:null, tag:null },
         { label:"3x Express Supply Pass", price:174564, old:null, tag:null },
