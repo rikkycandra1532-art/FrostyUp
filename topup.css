@@ -34,8 +34,9 @@
 
 /* ---------- Layout ---------- */
 .topup-layout{
-  display:grid; grid-template-columns: 1fr 360px; gap: 28px; align-items:start;
+  display:grid; grid-template-columns: 1fr 360px; gap: 28px; align-items:start; min-width: 0;
 }
+.topup-form-col, .summary-col{ min-width: 0; }
 
 /* ---------- Game header ---------- */
 .game-header{
@@ -54,7 +55,7 @@
 .game-header-meta .badge-trust{ font-size: 0.78rem; }
 
 /* ---------- Form cards ---------- */
-.form-card{ padding: 24px; margin-bottom: 20px; }
+.form-card{ padding: 24px; margin-bottom: 20px; min-width: 0; }
 .form-card-head{ display:flex; align-items:center; gap: 12px; margin-bottom: 18px; }
 .step-num{
   width: 26px; height: 26px; border-radius: 50%; flex-shrink:0;
@@ -117,7 +118,7 @@
 .nominal-item{
   position:relative; padding: 16px 14px; border-radius: 14px; text-align:left;
   background: rgba(255,255,255,0.04); border: 1.5px solid rgba(255,255,255,0.08);
-  cursor: pointer; transition: all .2s ease;
+  cursor: pointer; transition: all .2s ease; min-width: 0; width: 100%;
 }
 .nominal-item:hover{ border-color: rgba(0,229,255,0.35); transform: translateY(-2px); }
 .nominal-item.selected{
