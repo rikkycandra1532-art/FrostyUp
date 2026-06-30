@@ -38,32 +38,32 @@ const GAMES = {
     hint: "Lihat User ID dan Zone ID di bawah nama profil dalam game.",
     unit: "Diamonds",
     categories: [
-      { key:"weekly", label:"Weekly Diamond Pass", items: [
+      { key:"weekly", label:"Weekly Diamond Pass", icon:"https://i.postimg.cc/PJ045hLp/2e15f8f5-48a9-4e7f-8547-9db7f68924a5.webp", items: [
         { label:"Weekly Diamond Pass", price:28000, old:null, tag:null },
         { label:"2x Weekly Diamond Pass", price:57558, old:null, tag:null },
         { label:"3x Weekly Diamond Pass", price:86337, old:null, tag:null },
         { label:"4x Weekly Diamond Pass", price:115116, old:null, tag:null },
         { label:"5x Weekly Diamond Pass", price:143895, old:null, tag:null },
       ]},
-      { key:"misi", label:"Misi Top Up", items: [
+      { key:"misi", label:"Misi Top Up", icon:"https://i.postimg.cc/PJ045hLp/2e15f8f5-48a9-4e7f-8547-9db7f68924a5.webp", items: [
         { base:51, bonus:5, price:15383, old:null, tag:null },
         { base:100, bonus:10, price:30285, old:null, tag:null },
         { base:250, bonus:27, price:75712, old:null, tag:null },
         { base:503, bonus:65, price:148783, old:null, tag:null },
         { base:1006, bonus:130, price:297565, old:null, tag:null },
       ]},
-      { key:"first", label:"Bonus TopUp Pertama", items: [
+      { key:"first", label:"Bonus TopUp Pertama", icon:"https://i.postimg.cc/PJ045hLp/2e15f8f5-48a9-4e7f-8547-9db7f68924a5.webp", items: [
         { base:50, bonus:50, price:14500, old:null, tag:null },
         { base:150, bonus:150, price:42300, old:null, tag:null },
         { base:250, bonus:250, price:70100, old:null, tag:null },
         { base:500, bonus:500, price:141100, old:null, tag:null },
       ]},
-      { key:"special", label:"Special Items", items: [
+      { key:"special", label:"Special Items", icon:"https://i.postimg.cc/PJ045hLp/2e15f8f5-48a9-4e7f-8547-9db7f68924a5.webp", items: [
         { label:"Weekly Elite Pack", price:14290, old:null, tag:null },
         { label:"Monthly Epic Pack", price:70405, old:null, tag:null },
         { label:"Twilight Pass", price:141700, old:null, tag:null },
       ]},
-      { key:"diamond", label:"Top Up Diamond", items: [
+      { key:"diamond", label:"Top Up Diamond", icon:"https://i.postimg.cc/C59NxYZq/a93aec53-89b0-410a-a99b-b991069e49a3.webp", items: [
         { base:5, bonus:0, price:1489, old:null, tag:null },
         { base:10, bonus:1, price:2826, old:null, tag:null },
         { base:9, bonus:1, price:3030, old:null, tag:null },
@@ -227,10 +227,10 @@ const GAMES = {
     hint: "Player ID dapat dilihat di pojok kiri atas dalam game.",
     unit: "Diamonds",
     categories: [
-      { key:"membership", label:"Membership", items: [
+      { key:"membership", label:"Membership", icon:"https://i.postimg.cc/1Rb2tZ1b/6b93b7e9-3ef4-4d16-9fb7-4f878d1390ba.webp", items: [
         { label:"BP Card", price:43807, old:null, tag:null }
       ]},
-      { key:"diamond", label:"Diamonds", items: [
+      { key:"diamond", label:"Diamonds", icon:"https://i.postimg.cc/L4GwXMFb/1fdbc02c-9c9c-4134-90a1-6f36c062d91f.webp", items: [
         { label:"5 Diamonds", price:949, old:null, tag:null },
         { label:"12 Diamonds", price:1896, old:null, tag:null },
         { label:"10 Diamonds", price:1897, old:null, tag:null },
@@ -384,6 +384,7 @@ const GAMES = {
     ],
     hint: "Character ID dapat dilihat di halaman profil dalam game.",
     unit: "UC",
+    nominalIcon: "https://i.postimg.cc/Vs2p6cP3/2cd035db-9530-4169-8eaf-7e471d1856c0.webp",
     nominals: [
       { base:60, bonus:0, price:17165, old:null, tag:null },
       { base:300, bonus:25, price:84854, old:null, tag:null },
@@ -403,6 +404,7 @@ const GAMES = {
     ],
     hint: "User ID dapat dilihat di halaman profil dalam game.",
     unit: "Tokens",
+    nominalIcon: "https://i.postimg.cc/HWFRxCCG/8bada0e8-0ce4-452b-b706-ae65a189f6de.webp",
     nominals: [
       { label:"80 Tokens", price:16094, old:null, tag:null },
       { label:"240 Tokens", price:48659, old:null, tag:null },
@@ -426,6 +428,7 @@ const GAMES = {
     ],
     hint: "UID dapat dilihat di pojok kiri bawah dalam game.",
     unit: "Genesis Crystals",
+    nominalIcon: "https://i.postimg.cc/bYn6LyJL/d32a9681-d682-4bc5-94bd-76ec32a5314e.webp",
     nominals: [
       { base:60, bonus:0, price:16000, old:null, tag:null },
       { base:300, bonus:30, price:79000, old:null, tag:null },
@@ -444,7 +447,7 @@ const GAMES = {
     hint: "Riot ID format: NamaPengguna#TagLine.",
     unit: "VP",
     categories: [
-      { key:"id", label:"Indonesia", items: [
+      { key:"id", label:"Indonesia", icon:"https://i.postimg.cc/8kx95VVG/515b0ad1-fb09-43d4-b47f-f58960dd6b08.webp", items: [
         { label:"475 Points", price:53850, old:null, tag:null },
         { label:"950 Points", price:107699, old:null, tag:null },
         { label:"1000 Points", price:107699, old:null, tag:null },
@@ -478,7 +481,7 @@ const GAMES = {
         { label:"20000 Points", price:1968365, old:null, tag:null },
         { label:"22000 Points", price:2113563, old:null, tag:null },
       ]},
-      { key:"ph", label:"Philippines", items: [
+      { key:"ph", label:"Philippines", icon:"https://i.postimg.cc/8kx95VVG/515b0ad1-fb09-43d4-b47f-f58960dd6b08.webp", items: [
         { label:"475 VP", price:56282, old:null, tag:null },
         { label:"1000 VP", price:112847, old:null, tag:null },
         { label:"2050 VP", price:225975, old:null, tag:null },
@@ -486,7 +489,7 @@ const GAMES = {
         { label:"5350 VP", price:565359, old:null, tag:null },
         { label:"11000 VP", price:1131000, old:null, tag:null },
       ]},
-      { key:"sg", label:"Singapore", items: [
+      { key:"sg", label:"Singapore", icon:"https://i.postimg.cc/8kx95VVG/515b0ad1-fb09-43d4-b47f-f58960dd6b08.webp", items: [
         { label:"475 VP", price:93045, old:null, tag:null },
         { label:"1000 VP", price:186380, old:null, tag:null },
         { label:"2050 VP", price:359716, old:null, tag:null },
@@ -494,7 +497,7 @@ const GAMES = {
         { label:"5350 VP", price:893055, old:null, tag:null },
         { label:"11000 VP", price:1799732, old:null, tag:null },
       ]},
-      { key:"my", label:"Malaysia", items: [
+      { key:"my", label:"Malaysia", icon:"https://i.postimg.cc/8kx95VVG/515b0ad1-fb09-43d4-b47f-f58960dd6b08.webp", items: [
         { label:"475 VP", price:77227, old:null, tag:null },
         { label:"1000 VP", price:158938, old:null, tag:null },
         { label:"2050 VP", price:310105, old:null, tag:null },
@@ -514,7 +517,7 @@ const GAMES = {
     hint: "Pastikan username sesuai akun Roblox yang aktif.",
     unit: "Robux",
     categories: [
-      { key:"robux", label:"Robux", items: [
+      { key:"robux", label:"Robux", icon:"https://i.postimg.cc/jdN9nkRG/demon-robux.webp", items: [
         { label:"200 Robux (Promo)", price:68284, old:null, tag:null },
         { label:"300 Robux (Promo)", price:89229, old:null, tag:null },
         { label:"400 Robux", price:104571, old:null, tag:null },
@@ -547,7 +550,7 @@ const GAMES = {
     hint: "UID Open ID dapat dilihat di pengaturan akun dalam game.",
     unit: "CP",
     categories: [
-      { key:"regular", label:"CP", items: [
+      { key:"regular", label:"CP", icon:"https://i.postimg.cc/65RS41BS/ef8a491b-202c-49d0-9915-86d609db48fb.webp", items: [
         { label:"31 CP", price:4679, old:null, tag:null },
         { label:"63 CP", price:9570, old:null, tag:null },
         { label:"128 CP", price:19139, old:null, tag:null },
@@ -564,7 +567,7 @@ const GAMES = {
         { label:"38280 CP", price:4916678, old:null, tag:null },
         { label:"76560 CP", price:9833355, old:null, tag:null },
       ]},
-      { key:"instant", label:"Top Up Instant (Belum Kaitkan Garena)", items: [
+      { key:"instant", label:"Top Up Instant (Belum Kaitkan Garena)", icon:"https://i.postimg.cc/65RS41BS/ef8a491b-202c-49d0-9915-86d609db48fb.webp", items: [
         { label:"63 CP", price:9471, old:null, tag:null },
         { label:"128 CP", price:18942, old:null, tag:null },
         { label:"321 CP", price:47355, old:null, tag:null },
@@ -587,11 +590,23 @@ const GAMES = {
     ],
     hint: "UID dapat dilihat di pojok kiri bawah dalam game.",
     unit: "Oneiric Shards",
-    nominals: [
-      { base:60, bonus:0, price:16000, old:null, tag:null },
-      { base:300, bonus:30, price:79000, old:null, tag:null },
-      { base:980, bonus:110, price:249000, old:269000, tag:"Promo" },
-      { base:1980, bonus:260, price:479000, old:null, tag:"Best Value" }
+    categories: [
+      { key:"special", label:"Special Item", items: [
+        { label:"Express Supply Pass", price:58188, old:null, tag:null },
+        { label:"2x Express Supply Pass", price:116376, old:null, tag:null },
+        { label:"3x Express Supply Pass", price:174564, old:null, tag:null },
+        { label:"4x Express Supply Pass", price:232752, old:null, tag:null },
+        { label:"5x Express Supply Pass", price:290940, old:null, tag:null }
+      ]},
+      { key:"diamond", label:"Top Up", icon:"https://i.postimg.cc/rygDBWzv/HONKAI-STAR-1.webp", items: [
+        { base:60, bonus:0, price:11840, old:null, tag:null },
+        { base:300, bonus:30, price:58566, old:null, tag:null },
+        { base:980, bonus:110, price:181390, old:null, tag:null },
+        { base:1280, bonus:140, price:239956, old:null, tag:null },
+        { base:1980, bonus:260, price:367214, old:null, tag:null },
+        { base:3280, bonus:600, price:612357, old:null, tag:null },
+        { base:6480, bonus:1600, price:1166049, old:null, tag:"Best Value" }
+      ]}
     ]
   },
   deltaforce: {
@@ -604,11 +619,11 @@ const GAMES = {
     hint: "Player ID dapat dilihat di halaman profil dalam game.",
     unit: "Delta Coins",
     categories: [
-      { key:"special", label:"Special Item (Indonesia)", items: [
+      { key:"special", label:"Special Item (Indonesia)", icon:"https://i.postimg.cc/HWFRxCCC/129603240-ezgif-(1).webp", items: [
         { label:"Blaze Supplies - Garena (ID)", price:7588, old:null, tag:null },
         { label:"Blaze Supplies Advanced - Garena (ID)", price:21679, old:null, tag:null },
       ]},
-      { key:"id", label:"Delta Coins (Indonesia)", items: [
+      { key:"id", label:"Delta Coins (Indonesia)", icon:"https://i.postimg.cc/pX8751P3/IMG-1714.webp", items: [
         { base:18, bonus:0, price:5166, old:null, tag:null },
         { base:30, bonus:0, price:7749, old:null, tag:null },
         { base:60, bonus:0, price:17220, old:null, tag:null },
@@ -621,7 +636,7 @@ const GAMES = {
         { base:12960, bonus:3240, price:2917034, old:null, tag:null },
         { base:19440, bonus:4860, price:4375550, old:null, tag:null },
       ]},
-      { key:"my", label:"Delta Coins (Malaysia)", items: [
+      { key:"my", label:"Delta Coins (Malaysia)", icon:"https://i.postimg.cc/pX8751P3/IMG-1714.webp", items: [
         { base:18, bonus:1, price:4790, old:null, tag:null },
         { base:30, bonus:1, price:8074, old:null, tag:null },
         { base:60, bonus:2, price:16420, old:null, tag:null },
@@ -645,6 +660,7 @@ const GAMES = {
       { id:"email", label:"Email Akun Steam", placeholder:"Contoh: nama@email.com", type:"text", width:"full" }
     ],
     hint: "Kode voucher akan dikirim ke email yang didaftarkan.",
+    nominalIcon: "https://i.postimg.cc/KcCwzyy2/1754497879-Video-Game-Computer-Icons-Counter-Strike-Source-Logo-PNG-1-removebg-preview-ezgif.webp",
     nominals: [
       { label:"Rp 12.000", price:13000, old:null, tag:null },
       { label:"Rp 45.000", price:47000, old:null, tag:null },
