@@ -2,7 +2,7 @@
    topup.css — extends style.css for the per-game top up page
 ============================================================ */
 
-.topup-main{ padding: calc(var(--nav-h) + 28px) 0 80px; }
+.topup-main{ padding: calc(var(--nav-h) + 28px) 0 80px; overflow-x: hidden; max-width: 100vw; }
 
 .breadcrumb{
   display:flex; align-items:center; gap: 8px; font-size: 0.82rem; color: var(--muted);
@@ -113,7 +113,7 @@
 }
 
 /* ---------- Nominal grid ---------- */
-.nominal-grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.nominal-grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(min(150px, 100%), 1fr)); gap: 12px; }
 .nominal-item{
   position:relative; padding: 16px 14px; border-radius: 14px; text-align:left;
   background: rgba(255,255,255,0.04); border: 1.5px solid rgba(255,255,255,0.08);
@@ -133,6 +133,10 @@
   padding: 3px 8px; border-radius: 999px; color: var(--success);
   background: rgba(45,212,191,0.14); border: 1px solid rgba(45,212,191,0.45);
   box-shadow: 0 0 8px rgba(45,212,191,0.35);
+}
+.nominal-icon{
+  display:block; width: 30px; height: 30px; object-fit: contain;
+  margin-bottom: 8px; border-radius: 6px;
 }
 .nominal-amount{ font-family: var(--ff-display); font-weight:700; font-size: 0.95rem; margin-bottom: 6px; }
 .nominal-breakdown{
