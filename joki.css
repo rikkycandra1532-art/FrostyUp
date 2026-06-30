@@ -99,8 +99,36 @@
   box-shadow: 0 0 16px rgba(0,229,255,0.35);
 }
 
+/* ---------- Tier filter tabs (rank tier selector with scroll arrows) ---------- */
+.tier-tabs-wrap{
+  display:flex; align-items:center; gap: 8px; margin-bottom: 18px;
+}
+.tier-tabs{
+  display:flex; gap: 8px; overflow-x: auto; scroll-behavior: smooth;
+  scrollbar-width: none; flex: 1; min-width: 0;
+}
+.tier-tabs::-webkit-scrollbar{ display:none; }
+.tier-tab{
+  flex-shrink:0; padding: 10px 18px; border-radius: 999px;
+  font-family: var(--ff-display); font-weight:600; font-size: 0.86rem;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+  color: var(--frost-dim); white-space: nowrap; transition: all .2s ease; cursor:pointer;
+}
+.tier-tab:hover{ color: var(--frost); border-color: rgba(0,229,255,0.25); }
+.tier-tab.active{
+  background: var(--grad-cyan); color:#04141C; border-color: transparent;
+  box-shadow: 0 0 16px rgba(0,229,255,0.35);
+}
+.tier-tab-arrow{
+  flex-shrink:0; width:34px; height:34px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  color: var(--frost-dim); cursor:pointer; transition: all .2s ease;
+}
+.tier-tab-arrow:hover{ background: rgba(0,229,255,0.12); color: var(--cyan); border-color: rgba(0,229,255,0.3); }
+
 /* ---------- Package picker ---------- */
-.package-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 14px; }
+.package-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 14px; }
 .package-item{
   position:relative; display:block; padding: 18px; border-radius: 14px; cursor:pointer;
   background: rgba(255,255,255,0.04); border: 1.5px solid rgba(255,255,255,0.08);
