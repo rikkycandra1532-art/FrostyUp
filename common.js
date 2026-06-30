@@ -22,6 +22,24 @@
     toastTimer = setTimeout(()=> toastEl.classList.remove('show'), 2600);
   };
 
+  /* ---------- Smooth scroll for anchor links only ----------
+     CSS `scroll-behavior: smooth` on <html> affects ALL scrolling,
+     including manual mouse wheel input, which can feel overly fast
+     or "floaty" on desktop. Instead, scroll-behavior stays "auto"
+     globally, and we apply a smooth scroll manually only when an
+     in-page anchor link (href="#id") is clicked.
+  ---------------------------------------------------------- */
+  document.addEventListener('click', (e)=>{
+    const link = e.target.closest('a[href^="#"]');
+    if(!link) return;
+    const id = link.getAttribute('href').slice(1);
+    if(!id) return;
+    const target = document.getElementById(id);
+    if(!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
   /* ---------- Navbar scroll state ---------- */
   const nav = document.getElementById('nav');
   if(nav){
