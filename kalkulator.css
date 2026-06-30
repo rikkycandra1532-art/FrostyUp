@@ -1,0 +1,65 @@
+/* ============================================================
+   kalkulator.css — Win Rate, Magic Wheel, Zodiac calculators
+   Matches the BangJeff layout: simple tab switcher, plain form
+   fields for Win Rate, and a slider + point/diamond readout for
+   Magic Wheel and Zodiac (same mechanic, different max diamond).
+============================================================ */
+
+.active-link{ color: var(--cyan) !important; }
+
+.kalk-main{ padding: calc(var(--nav-h) + 28px) 0 80px; }
+
+/* ---------- Tab switcher ---------- */
+.kalk-tabs{
+  display:flex; gap: 8px; margin-bottom: 24px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px; padding: 6px; max-width: 560px;
+}
+.kalk-tab{
+  flex:1; padding: 12px 14px; border-radius: 10px; text-align:center;
+  font-family: var(--ff-display); font-weight:600; font-size: 0.88rem;
+  color: var(--frost-dim); transition: all .2s ease; cursor:pointer;
+}
+.kalk-tab:hover{ color: var(--frost); }
+.kalk-tab.active{
+  background: var(--grad-cyan); color:#04141C;
+  box-shadow: 0 0 16px rgba(0,229,255,0.35);
+}
+
+/* ---------- Panel shared ---------- */
+.kalk-panel{ max-width: 560px; padding: 28px; }
+.kalk-panel h3{ font-size: 1.2rem; margin-bottom: 8px; }
+.kalk-panel > p.muted{ font-size: 0.88rem; margin-bottom: 22px; }
+
+/* ---------- Win Rate fields ---------- */
+.kalk-btn-row{ display:flex; gap: 12px; margin-top: 6px; }
+.kalk-btn-row .btn{ flex:1; }
+.kalk-error{ color: var(--danger); margin-top: 10px; }
+
+.kalk-result{ padding: 18px 20px; margin-top: 18px; }
+.kalk-result-row{ display:flex; justify-content:space-between; align-items:center; padding: 8px 0; font-size: 0.9rem; color: var(--frost-dim); }
+.kalk-result-row + .kalk-result-row{ border-top: 1px solid rgba(255,255,255,0.08); }
+.kalk-result-row strong{ font-family: var(--ff-display); font-size: 1rem; color: var(--frost); }
+
+/* ---------- Magic Wheel / Zodiac slider ---------- */
+.kalk-slider-label{
+  display:block; font-size: 0.9rem; color: var(--frost-dim); font-weight:600; margin-bottom: 14px;
+}
+.kalk-slider{
+  width: 100%; accent-color: var(--cyan); height: 8px; margin-bottom: 24px;
+}
+.kalk-point-line{
+  font-size: 0.95rem; color: var(--frost-dim); margin-bottom: 8px;
+}
+.kalk-point-line strong{ font-family: var(--ff-mono); color: var(--cyan); font-size: 1.1rem; margin-left: 4px; }
+.kalk-diamond-line{
+  font-size: 1.05rem; color: var(--frost-dim); font-weight:500;
+}
+.kalk-diamond-line strong{ font-family: var(--ff-display); font-size: 1.3rem; margin: 0 4px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px){
+  .kalk-tabs{ flex-wrap: wrap; }
+  .kalk-tab{ flex: 1 1 45%; }
+  .kalk-btn-row{ flex-direction:column; }
+}

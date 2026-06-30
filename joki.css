@@ -1,0 +1,142 @@
+/* ============================================================
+   joki.css — extends style.css + topup.css for the joki rank page
+============================================================ */
+
+.active-link{ color: var(--cyan) !important; }
+
+/* ---------- Joki landing page ---------- */
+.joki-landing-main{ padding: calc(var(--nav-h) + 28px) 0 80px; }
+
+.joki-hero{ padding: 0; overflow:hidden; border-radius: var(--radius-lg); }
+.joki-hero-img{ display:block; width:100%; max-height: 480px; object-fit: cover; object-position: top; }
+
+.joki-service-grid{
+  display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 48px;
+}
+.joki-service-card{
+  display:flex; flex-direction:column; overflow:hidden; transition: all .25s ease;
+}
+.joki-service-card:hover{
+  transform: translateY(-5px); border-color: rgba(0,229,255,0.4); box-shadow: var(--shadow-glow-strong);
+}
+.joki-service-thumb{ position:relative; height: 180px; overflow:hidden; }
+.joki-service-thumb img{ width:100%; height:100%; object-fit:cover; }
+.joki-service-badge{
+  position:absolute; top:12px; right:12px; font-size: 0.7rem; font-weight:700;
+  padding: 4px 10px; border-radius:999px; color:#04141C; background: var(--grad-cyan);
+}
+.joki-service-badge.tag-best{ background: linear-gradient(135deg, #2DD4BF, #0EA5E9); }
+.joki-service-badge.tag-new{ background: linear-gradient(135deg, #FBBF24, #F97316); }
+.joki-service-body{ padding: 20px; display:flex; flex-direction:column; gap:10px; flex:1; }
+.joki-service-body h3{ font-size: 1.05rem; }
+.joki-service-body p{ font-size: 0.86rem; flex:1; }
+.joki-service-cta{ width:100%; margin-top: 4px; }
+
+.joki-landing-rules{ padding: 24px 28px; max-width: 640px; }
+.joki-landing-rules h4{ font-size: 1rem; margin-bottom: 10px; }
+
+@media (max-width: 600px){
+  .joki-hero-img{ max-height: 320px; }
+}
+
+/* ---------- Banner image inside Per Bintang / Paket Hemat panels ---------- */
+.joki-banner-img{
+  display:block; width: calc(100% + 48px); margin: -24px -24px 20px -24px;
+  object-fit: contain; background: #05080F;
+  border-radius: 24px 24px 0 0;
+}
+
+/* ---------- Rank selectors ---------- */
+.rank-select-row{
+  display:grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items:start; margin-bottom: 18px;
+}
+.rank-select-col{ display:flex; flex-direction:column; gap: 8px; }
+.rank-select-col label{ font-size: 0.82rem; color: var(--frost-dim); font-weight:500; }
+.rank-select-col select{
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px; padding: 12px 14px; color: var(--frost); font-size: 0.92rem; outline: none;
+}
+.rank-select-col select:focus{ border-color: rgba(0,229,255,0.5); }
+.rank-select-col select option{
+  background: var(--slate-2); color: var(--frost);
+}
+.rank-select-col select option:disabled{ color: var(--muted); }
+
+.rank-arrow{
+  display:flex; align-items:center; justify-content:center;
+  width: 36px; height: 36px; border-radius: 50%; margin-top: 26px;
+  background: rgba(0,229,255,0.1); border: 1px solid rgba(0,229,255,0.25); color: var(--cyan);
+  flex-shrink:0;
+}
+
+.rank-star-picker{ display:flex; flex-direction:column; gap: 6px; }
+.rank-star-picker label{ font-size: 0.74rem; color: var(--muted); }
+.rank-star-picker input[type="range"]{
+  width: 100%; accent-color: var(--cyan); height: 4px;
+}
+.star-display{ font-family: var(--ff-mono); font-size: 0.8rem; color: var(--warn); align-self:flex-end; }
+
+.rank-summary-bar{
+  padding: 12px 16px; border-radius: 12px; font-size: 0.86rem;
+  background: rgba(0,229,255,0.06); border: 1px solid rgba(0,229,255,0.2); color: var(--frost-dim);
+}
+.rank-summary-bar strong{ color: var(--cyan); }
+
+/* ---------- Pricing mode tabs ---------- */
+.joki-tabs{
+  display:flex; gap: 8px; margin-bottom: 20px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px; padding: 6px;
+}
+.joki-tab{
+  flex:1; padding: 11px 16px; border-radius: 10px; text-align:center;
+  font-family: var(--ff-display); font-weight:600; font-size: 0.9rem;
+  color: var(--frost-dim); transition: all .2s ease; cursor:pointer;
+}
+.joki-tab:hover{ color: var(--frost); }
+.joki-tab.active{
+  background: var(--grad-cyan); color:#04141C;
+  box-shadow: 0 0 16px rgba(0,229,255,0.35);
+}
+
+/* ---------- Package picker ---------- */
+.package-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 14px; }
+.package-item{
+  position:relative; display:block; padding: 18px; border-radius: 14px; cursor:pointer;
+  background: rgba(255,255,255,0.04); border: 1.5px solid rgba(255,255,255,0.08);
+  transition: all .2s ease;
+}
+.package-item input{ position:absolute; opacity:0; pointer-events:none; }
+.package-item:hover{ border-color: rgba(0,229,255,0.3); transform: translateY(-2px); }
+.package-item:has(input:checked){
+  border-color: var(--cyan); background: rgba(0,229,255,0.08);
+  box-shadow: 0 0 0 1px rgba(0,229,255,0.4), 0 0 16px rgba(0,229,255,0.2);
+}
+.package-badge{
+  position:absolute; top:-9px; right: 14px; font-size: 0.62rem; font-weight:700;
+  padding: 3px 9px; border-radius: 999px; color:#04141C; background: var(--grad-cyan);
+}
+.package-route{ font-family: var(--ff-display); font-weight:700; font-size: 0.96rem; margin-bottom: 4px; }
+.package-stars{ font-size: 0.76rem; color: var(--muted); margin-bottom: 12px; }
+.package-price-row{ display:flex; flex-direction:column; gap:2px; }
+.package-old{ font-size: 0.74rem; color: var(--muted); text-decoration: line-through; }
+.package-price{ font-family: var(--ff-mono); font-size: 1.05rem; color: var(--cyan); font-weight:700; }
+.package-save{ font-size: 0.72rem; color: var(--success); margin-top: 6px; }
+
+/* ---------- Joki warning + rules ---------- */
+.joki-warning{
+  margin-top: 14px; padding: 12px 14px; border-radius: 10px;
+  background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.3);
+  color: #FDE68A; font-size: 0.78rem !important; line-height: 1.6;
+}
+.joki-rules{ list-style:none; display:flex; flex-direction:column; gap: 8px; margin-top: 10px; }
+.joki-rules li{
+  font-size: 0.8rem; color: var(--frost-dim); padding-left: 18px; position:relative; line-height:1.5;
+}
+.joki-rules li::before{ content:'•'; position:absolute; left:0; color: var(--cyan); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px){
+  .rank-select-row{ grid-template-columns: 1fr; }
+  .rank-arrow{ margin: 0 auto; transform: rotate(90deg); }
+}
