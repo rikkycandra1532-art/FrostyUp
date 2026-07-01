@@ -660,30 +660,8 @@ html.light .mobile-drawer{ background: rgba(238,243,251,0.98); }
 .reward-card h3{ font-size: 1.3rem; margin: 8px 0 10px; }
 .reward-card p{ margin-bottom: 22px; }
 
-.spin-wheel-wrap{ position:relative; width: 220px; height:220px; margin: 0 auto 24px; }
-.spin-wheel{
-  width:100%; height:100%; border-radius:50%; position:relative; overflow:hidden;
-  border: 4px solid rgba(76,201,240,0.35);
-  box-shadow: 0 0 30px rgba(0,229,255,0.25), inset 0 0 20px rgba(0,229,255,0.1);
-  transition: transform 3.2s cubic-bezier(.17,.89,.32,1.1);
-  background: conic-gradient(from 0deg,
-    rgba(76,201,240,0.18) 0deg 60deg,
-    rgba(0,229,255,0.1) 60deg 120deg,
-    rgba(76,201,240,0.18) 120deg 180deg,
-    rgba(0,229,255,0.1) 180deg 240deg,
-    rgba(76,201,240,0.18) 240deg 300deg,
-    rgba(0,229,255,0.1) 300deg 360deg);
-}
-.spin-seg{
-  position:absolute; width:50%; height:50%; display:flex; align-items:flex-start; justify-content:center;
-  padding-top: 14px; font-size: 1.3rem; left:50%; top:50%; transform-origin: 0 0;
-}
-.s1{ transform: rotate(0deg) translate(-50%,-100%); }
-.s2{ transform: rotate(60deg) translate(-50%,-100%); }
-.s3{ transform: rotate(120deg) translate(-50%,-100%); }
-.s4{ transform: rotate(180deg) translate(-50%,-100%); }
-.s5{ transform: rotate(240deg) translate(-50%,-100%); }
-.s6{ transform: rotate(300deg) translate(-50%,-100%); }
+.spin-wheel-wrap{ position:relative; width:240px; height:240px; margin:0 auto 24px; }
+#spinWheel{ display:block; border-radius:50%; }
 .spin-pointer{
   position:absolute; top:-6px; left:50%; transform: translateX(-50%);
   width:0; height:0; border-left:10px solid transparent; border-right:10px solid transparent;
@@ -994,4 +972,46 @@ html.light .mobile-drawer{ background: rgba(238,243,251,0.98); }
   .promo-title{ font-size: 1.2rem; }
   .promo-code-box{ flex-direction:column; gap: 10px; }
   .promo-copy-btn{ width:100%; }
+}
+
+/* ===== Back Button ===== */
+.back-btn-wrap{ margin: 8px 0 16px; }
+.back-btn{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:8px 16px; border-radius:999px;
+  background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);
+  color:var(--frost-dim); font-size:0.85rem; font-weight:500;
+  cursor:pointer; transition:all .2s ease;
+}
+.back-btn:hover{
+  background:rgba(0,229,255,0.08); border-color:rgba(0,229,255,0.3);
+  color:var(--cyan); transform:translateX(-3px);
+}
+
+/* ===== APK Promo Banner (homepage) ===== */
+.apk-promo-banner{ display:block; }
+.apk-promo-inner{
+  border-radius:var(--radius-lg); overflow:hidden;
+  display:flex; align-items:stretch; min-height:160px;
+  transition:all .3s ease;
+}
+.apk-promo-inner:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 32px rgba(0,229,255,0.15);
+}
+.apk-promo-visual{
+  flex:1; min-width:0; overflow:hidden;
+}
+.apk-promo-visual svg{ display:block; }
+.apk-promo-content{
+  flex-shrink:0; width:260px; padding:28px 28px 28px 24px;
+  display:flex; flex-direction:column; justify-content:center;
+  border-left:1px solid rgba(255,255,255,0.06);
+}
+.apk-promo-content h3{ font-size:1.3rem; margin:8px 0 6px; }
+.apk-promo-content p{ font-size:0.85rem; color:var(--muted); line-height:1.5; margin:0; }
+
+@media(max-width:768px){
+  .apk-promo-inner{ flex-direction:column; }
+  .apk-promo-content{ width:auto; border-left:none; border-top:1px solid rgba(255,255,255,0.06); }
 }
