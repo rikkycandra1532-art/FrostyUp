@@ -548,7 +548,7 @@ const GAMES = {
       { id:"uid", label:"UID Open ID", placeholder:"Contoh: 7712345678", type:"text", width:"full" }
     ],
     hint: "UID Open ID dapat dilihat di pengaturan akun dalam game.",
-    unit: "CP",
+    unit: "Top Up Instant Indonesia",
     categories: [
       { key:"regular", label:"CP", icon:"https://i.postimg.cc/65RS41BS/ef8a491b-202c-49d0-9915-86d609db48fb.webp", items: [
         { label:"31 CP", price:4679, old:null, tag:null },
