@@ -550,7 +550,7 @@ const GAMES = {
     hint: "UID Open ID dapat dilihat di pengaturan akun dalam game.",
     unit: "CP",
     categories: [
-      { key:"regular", label:"Top Up Instant Indonesia", icon:"https://i.postimg.cc/65RS41BS/ef8a491b-202c-49d0-9915-86d609db48fb.webp", items: [
+      { key:"regular", label:"CP", icon:"https://i.postimg.cc/65RS41BS/ef8a491b-202c-49d0-9915-86d609db48fb.webp", items: [
         { label:"31 CP", price:4679, old:null, tag:null },
         { label:"63 CP", price:9570, old:null, tag:null },
         { label:"128 CP", price:19139, old:null, tag:null },
@@ -591,7 +591,7 @@ const GAMES = {
     hint: "UID dapat dilihat di pojok kiri bawah dalam game.",
     unit: "Oneiric Shards",
     categories: [
-      { key:"special", label:"Special Item", icon:"https://i.postimg.cc/L4vJcfh7/HONKAI-STAR-2.webp", items: [
+      { key:"special", label:"Special Item", items: [
         { label:"Express Supply Pass", price:58188, old:null, tag:null },
         { label:"2x Express Supply Pass", price:116376, old:null, tag:null },
         { label:"3x Express Supply Pass", price:174564, old:null, tag:null },
