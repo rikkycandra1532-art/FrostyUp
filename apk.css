@@ -57,18 +57,32 @@
   padding: 4px 10px; border-radius:999px; border:1px solid;
 }
 .apk-card-head{ display:flex; align-items:center; gap:12px; }
-.apk-brand-dot{ width:36px; height:36px; border-radius:10px; flex-shrink:0; }
+.apk-brand-logo{
+  width:44px; height:44px; border-radius:12px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  border: 1px solid rgba(255,255,255,0.08);
+}
 .apk-card-name{ font-family: var(--ff-display); font-weight:700; font-size:1rem; }
 .apk-card-type{ font-size:0.78rem; color: var(--muted); margin-top:2px; }
-.apk-card-desc{ font-size:0.84rem; line-height:1.6; margin:0; }
-.apk-features{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; }
-.apk-features li{ display:flex; align-items:center; gap:8px; font-size:0.82rem; color: var(--frost-dim); }
-.apk-card-footer{ margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
-.apk-price-wrap{ display:flex; align-items:baseline; gap:4px; flex-wrap:wrap; }
-.apk-old-price{ font-size:0.8rem; color: var(--muted); text-decoration:line-through; }
-.apk-price{ font-family: var(--ff-display); font-weight:700; font-size:1.2rem; color: var(--cyan); }
-.apk-per{ font-size:0.75rem; color: var(--muted); }
-.apk-buy-btn{ flex-shrink:0; padding: 10px 18px; font-size:0.84rem; }
+
+/* Badge per brand */
+.apk-badge{ position:absolute; top:16px; right:16px; font-size:0.7rem; font-weight:700; padding: 4px 10px; border-radius:999px; border:1px solid; }
+.apk-badge-youtube{ background:rgba(255,0,0,0.12); color:#FF4444; border-color:rgba(255,0,0,0.3); }
+.apk-badge-netflix{ background:rgba(229,9,20,0.12); color:#FF3333; border-color:rgba(229,9,20,0.3); }
+.apk-badge-spotify{ background:rgba(29,185,84,0.12); color:#1DB954; border-color:rgba(29,185,84,0.3); }
+.apk-badge-disney{ background:rgba(17,60,207,0.12); color:#4C7FFF; border-color:rgba(17,60,207,0.3); }
+
+/* Harga per brand */
+.apk-price-youtube{ color:#FF4444; }
+.apk-price-netflix{ color:#FF3333; }
+.apk-price-spotify{ color:#1DB954; }
+.apk-price-disney{ color:#4C7FFF; }
+
+/* Checklist per brand */
+.apk-features-youtube li svg{ stroke:#FF4444; }
+.apk-features-netflix li svg{ stroke:#FF3333; }
+.apk-features-spotify li svg{ stroke:#1DB954; }
+.apk-features-disney li svg{ stroke:#4C7FFF; }
 
 /* How it works */
 .apk-how{ padding:40px; border-radius: var(--radius-lg); }
@@ -106,4 +120,37 @@
   .apk-hero{ padding:28px 22px; flex-direction:column; }
   .apk-steps{ flex-direction:column; align-items:center; }
   .apk-step-arrow{ transform:rotate(90deg); margin:0; }
+}
+
+.apk-card-desc{ font-size:0.84rem; line-height:1.6; margin:0; }
+.apk-features{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px; }
+.apk-features li{ display:flex; align-items:center; gap:8px; font-size:0.82rem; color: var(--frost-dim); }
+.apk-card-footer{ margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+.apk-price-wrap{ display:flex; align-items:baseline; gap:4px; flex-wrap:wrap; }
+.apk-old-price{ font-size:0.8rem; color: var(--muted); text-decoration:line-through; }
+.apk-price{ font-family: var(--ff-display); font-weight:700; font-size:1.2rem; }
+.apk-per{ font-size:0.75rem; color: var(--muted); }
+.apk-buy-btn{ flex-shrink:0; padding: 10px 18px; font-size:0.84rem; }
+
+/* ===== APK halaman gaya Joki Rank ===== */
+.apk-joki-hero{
+  padding: calc(var(--nav-h) + 40px) 0 48px;
+  text-align: center;
+}
+.apk-joki-hero h1{ font-size: clamp(1.8rem,3.5vw,2.8rem); margin-bottom:12px; }
+.apk-joki-hero .muted{ max-width:520px; margin:0 auto 20px; }
+
+/* Thumbnail background per brand */
+.apk-thumb-yt{ background: linear-gradient(135deg, #1a0000, #3d0000); }
+.apk-thumb-nf{ background: linear-gradient(135deg, #1a0005, #3d0010); }
+.apk-thumb-sp{ background: linear-gradient(135deg, #001a06, #003d10); }
+.apk-thumb-ds{ background: linear-gradient(135deg, #00051a, #00103d); }
+
+.apk-thumb-icon{
+  display:flex; align-items:center; justify-content:center;
+  width:100%; height:100%;
+}
+
+.apk-service-grid{
+  grid-template-columns: repeat(auto-fill, minmax(min(280px,100%),1fr));
 }
