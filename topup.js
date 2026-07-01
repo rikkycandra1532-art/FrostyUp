@@ -278,6 +278,11 @@
     gameSoldCount.textContent = game.sold;
     document.title = `Top Up ${game.name} — FrostyUp`;
 
+    // update URL di address bar tanpa reload halaman,
+    // supaya copy-paste link dan tombol Back/Forward browser bekerja benar
+    const newUrl = `${location.pathname}?game=${key}`;
+    history.pushState({ game: key }, document.title, newUrl);
+
     renderGameSwitcher();
     renderFields();
     renderNominals();
@@ -517,5 +522,30 @@
     gameSoldCount.textContent = game.sold;
     document.title = `Top Up ${game.name} — FrostyUp`;
   })();
+
+  // handle browser Back / Forward button — saat user tekan back/forward,
+  // tampilan game ikut berubah sesuai URL yang baru dituju
+  window.addEventListener('popstate', (e)=>{
+    const params = new URLSearchParams(window.location.search);
+    const key = params.get('game') || 'mlbb';
+    if(GAMES[key] && key !== state.gameKey){
+      state.gameKey = key;
+      state.promo = null;
+      activeCategoryKey = null;
+      promoInput.value = '';
+      promoMsg.textContent = '';
+      promoMsg.className = 'promo-msg';
+      const game = GAMES[key];
+      bcGameName.textContent = game.name;
+      gameHeaderThumb.innerHTML = getGameIcon(game, 'header-icon');
+      gameTitle.textContent = game.name;
+      gameSoldCount.textContent = game.sold;
+      document.title = `Top Up ${game.name} — FrostyUp`;
+      renderGameSwitcher();
+      renderFields();
+      renderNominals();
+      updateSummary();
+    }
+  });
 
 })();
